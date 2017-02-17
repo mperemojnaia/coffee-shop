@@ -1,0 +1,3 @@
+com\coffee\config\WebConfiguration.class
+com\coffee\config\AppInit.class
+com\coffee\controller\MainPageController.class
