@@ -12,7 +12,7 @@ public class ShopController {
     @RequestMapping(method = RequestMethod.GET)
     public String shopping(ModelMap model) {
 
-        model.addAttribute("message", "Spring 3 MVC - Hello World");
+        model.addAttribute("beverageTypes", "Spring 3 MVC - Hello World");
         return "shop";
 
     }
