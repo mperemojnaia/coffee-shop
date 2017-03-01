@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-public enum CoffeeType {
+public enum BeverageType {
     ESPRESSO("Espresso"),
     AMERICANO("Americano"),
     CAPPUCCINO("Cappuccino"),
     MOCHA("Mocha"),
     LATTE("Latte");
 
-    CoffeeType(String value) {
+    BeverageType(String value) {
     }
 
-    public List<CoffeeType> getTeaTypes(){
-        return new ArrayList<CoffeeType>(EnumSet.allOf(CoffeeType.class));
+    public List<BeverageType> getTeaTypes(){
+        return new ArrayList<BeverageType>(EnumSet.allOf(BeverageType.class));
     }
 
 }

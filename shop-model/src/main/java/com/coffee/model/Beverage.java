@@ -1,20 +1,20 @@
 package com.coffee.model;
 
-import com.coffee.types.CoffeeType;
+import com.coffee.types.BeverageType;
 import com.coffee.types.Flavouring;
 import com.coffee.types.SizeType;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "COFFEE")
-public class Coffee {
+public class Beverage {
 
     @Id
     private Long id;
 
     private SizeType size;
 
-    private CoffeeType coffeeType;
+    private BeverageType beverageType;
 
     private Flavouring flavour;
 
@@ -34,12 +34,12 @@ public class Coffee {
         this.size = size;
     }
 
-    public CoffeeType getCoffeeType() {
-        return coffeeType;
+    public BeverageType getBeverageType() {
+        return beverageType;
     }
 
-    public void setCoffeeType(CoffeeType coffeeType) {
-        this.coffeeType = coffeeType;
+    public void setBeverageType(BeverageType beverageType) {
+        this.beverageType = beverageType;
     }
 
     public Flavouring getFlavour() {
