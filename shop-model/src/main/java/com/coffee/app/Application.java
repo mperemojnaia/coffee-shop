@@ -1,7 +1,5 @@
 package com.coffee.app;
 
-import com.coffee.model.Tea;
-import com.coffee.model.repository.TeaRepository;
 import com.coffee.types.Flavouring;
 import com.coffee.types.SizeType;
 import com.coffee.types.TeaType;

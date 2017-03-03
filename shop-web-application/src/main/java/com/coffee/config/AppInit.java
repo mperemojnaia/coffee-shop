@@ -11,7 +11,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         };
     }
 
-    // Тут добавляем конфигурацию, в которой инициализируем ViewResolver
+    
     @Override
     protected Class<?>[] getServletConfigClasses() {
 

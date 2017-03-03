@@ -1,29 +1,21 @@
-package com.coffee.model;
+package com.coffee.model.mongo.document;
 
 import com.coffee.types.BeverageType;
 import com.coffee.types.Flavouring;
 import com.coffee.types.SizeType;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "BEVERAGE")
-public class Beverage {
+@Document(collection = "COFFEE")
+public class BeverageDocument {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    @Enumerated
     private SizeType size;
 
-    @Column(name = "beverage_type")
-    @Enumerated
     private BeverageType beverageType;
 
-    @Column(name = "flavour")
-    @Enumerated
     private Flavouring flavour;
 
     public Long getId() {
@@ -57,4 +49,5 @@ public class Beverage {
     public void setFlavour(Flavouring flavour) {
         this.flavour = flavour;
     }
+
 }
