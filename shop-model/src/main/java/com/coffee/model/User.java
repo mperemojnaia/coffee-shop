@@ -1,13 +1,13 @@
 package com.coffee.model;
 
-import com.coffee.types.BeverageType;
 import com.coffee.types.RoleType;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "USERS")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,15 +17,13 @@ public class User {
     private String userName;
 
     @Column(name = "FIRST_NAME")
-    @Enumerated
-    private BeverageType firstName;
+    private String firstName;
 
     @Column(name = "LAST_NAME")
-    @Enumerated
-    private BeverageType lastName;
+    private String lastName;
 
     @Column(name = "ROLE_TYPE")
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private RoleType role;
     
     @Column(name = "IS_ACTIVE")
@@ -47,19 +45,19 @@ public class User {
         this.userName = userName;
     }
 
-    public BeverageType getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(BeverageType firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public BeverageType getLastName() {
+    public String getLastName(String doe) {
         return lastName;
     }
 
-    public void setLastName(BeverageType lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
